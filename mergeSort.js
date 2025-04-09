@@ -6,6 +6,10 @@ function mergeSort(nums) {
     let left = mergeSort(getLeft(nums))
     let right = mergeSort(getRight(nums))
 
+    return merge(left, right)
+}
+
+function merge(left, right) {
     let merged = []
     let leftPtr = 0
     let rightPtr = 0
@@ -34,9 +38,8 @@ function mergeSort(nums) {
             leftPtr++
         }
     }
-
-    // console.log(`Merged: ${merged} | \t\t\tLeft: ${left} | Right: ${right}`)
     
+    // console.log(`Merged: ${merged} | \t\t\tLeft: ${left} | Right: ${right}`)
     return merged
 }
 
